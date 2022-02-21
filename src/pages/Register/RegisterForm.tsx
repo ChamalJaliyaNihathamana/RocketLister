@@ -10,9 +10,8 @@ import {
   Row,
 } from "react-bootstrap";
 import { Upload } from "react-bootstrap-icons";
-import { FaIcons } from "react-icons/fa";
-import CustomButton from "../Button/CustomButton";
-import "./RegisterForm.scss";
+import CustomButton from "../../common/components/ui/Button/CustomButton";
+
 
 interface RegisterProps {}
 

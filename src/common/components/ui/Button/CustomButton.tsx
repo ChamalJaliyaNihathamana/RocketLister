@@ -1,6 +1,5 @@
 import * as React from "react";
 import { Button } from "react-bootstrap";
-import "./CustomButton.scss";
 // import * as BSI from "react-bootstrap-icons";
 
 interface CustomButtonProps {

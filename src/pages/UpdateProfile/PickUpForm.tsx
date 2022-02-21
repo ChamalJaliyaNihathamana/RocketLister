@@ -7,9 +7,9 @@ import {
   Form,
   Row,
 } from "react-bootstrap";
-import CheckBox from "../../components/ui/CheckBox/CheckBox";
-import Map from "../../components/ui/Map/Map";
-import Title from "../../components/ui/Title/Title";
+import CheckBox from "../../common/components/ui/CheckBox/CheckBox";
+import Map from "../../common/components/ui/Map/Map";
+import Title from "../../common/components/ui/Title/Title";
 
 interface PickUpProps {}
 
@@ -20,7 +20,7 @@ const PickUp: React.FunctionComponent<PickUpProps> = () => {
   ];
 
   return (
-    <Container>
+  
       <Form className="mb-4">
         <Form.Group className="mb-3">
           <Row>
@@ -90,7 +90,7 @@ const PickUp: React.FunctionComponent<PickUpProps> = () => {
           </Row>
         </Form.Group>
       </Form>
-    </Container>
+  
   );
 };
 

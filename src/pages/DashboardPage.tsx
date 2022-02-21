@@ -28,6 +28,10 @@ class DashboardPage extends React.Component<
       </React.Fragment>
     );
 
+    var organization = (
+      <React.Fragment>{<b>Keller</b>} Williams</React.Fragment>
+    );
+
     return (
       <Container>
         <Row className="mt-3">
@@ -39,6 +43,7 @@ class DashboardPage extends React.Component<
               image="https://images.unsplash.com/photo-1574784619102-f7e342f21aa0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
               logo="Kw"
               name="Welcome Jessica"
+              org={organization}
             />
 
             <BannerCard

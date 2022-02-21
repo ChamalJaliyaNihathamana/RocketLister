@@ -5,12 +5,15 @@ interface AvatarProps {
   image: string;
   logo: string;
   name: string;
+  org: any;
 }
 
 const Avatar: React.FunctionComponent<AvatarProps> = ({
   image,
   logo,
   name,
+  org
+
 }) => {
   return (
     <Row className="avatar">
@@ -23,7 +26,7 @@ const Avatar: React.FunctionComponent<AvatarProps> = ({
         <h1 className="avatar__text-box--avatar-name">{name}</h1>
         <h1 className="avatar__text-box--logo">{logo}</h1>
         <p className="avatar__text-box--org">
-          <strong>Killer</strong>Williams
+          {org}
         </p>
       </Col>
     </Row>

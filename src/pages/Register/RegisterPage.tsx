@@ -1,8 +1,8 @@
 import * as React from "react";
 import { Col, Container, Row, Image } from "react-bootstrap";
 import { PersonFill } from "react-bootstrap-icons";
-import RegisterForm from "../common/components/ui/Form/RegisterForm";
-import Title from "../common/components/ui/Title/Title";
+import RegisterForm from "./RegisterForm";
+import Title from "../../common/components/ui/Title/Title";
 
 interface RegisterPageProps {}
 

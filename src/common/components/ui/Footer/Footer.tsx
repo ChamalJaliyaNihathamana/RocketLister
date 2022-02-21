@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
-import "./Footer.scss";
+
 
 interface FooterProps {}
 

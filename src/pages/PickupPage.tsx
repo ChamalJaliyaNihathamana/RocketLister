@@ -1,6 +1,6 @@
 import React from "react";
 import Sidenav from "../common/components/ui/SideBar/Sidenav";
-import PickUp from "../common/containers/update-profile/Pick-Up";
+import PickUp from "./UpdateProfile/PickUpForm";
 
 interface PickUpPageProps {}
 

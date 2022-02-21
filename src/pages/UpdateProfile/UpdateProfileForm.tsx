@@ -11,15 +11,14 @@ import {
   Row,
 } from "react-bootstrap";
 import * as FaIcons from "react-icons/fa";
-import "./CustomFormInput.scss";
-import ModalComponent from "../Modal/Modal";
-import ToastComponent from "../Toast/ToastComponent";
-import CustomButton from "../Button/CustomButton";
+import ModalComponent from "../../common/components/ui/Modal/Modal";
+import ToastComponent from "../../common/components/ui/Toast/ToastComponent";
+import CustomButton from "../../common/components/ui/Button/CustomButton";
 import { toast } from "react-toastify";
 
-interface CustomFormInputProps {}
+interface UpdateProfileProps {}
 
-const CustomFormInput: React.FunctionComponent<CustomFormInputProps> = () => {
+const UpdateProfile: React.FunctionComponent<UpdateProfileProps> = () => {
   const notify = () =>
     toast.success("Upload Photo Successfully", {
       position: "bottom-right",
@@ -40,7 +39,7 @@ const CustomFormInput: React.FunctionComponent<CustomFormInputProps> = () => {
             <Col>
               <p>
                 <FaIcons.FaUser className="title_icon" />
-                Update Profile
+                UpdateProfile Profile
               </p>
             </Col>
             <Col>
@@ -155,12 +154,12 @@ const CustomFormInput: React.FunctionComponent<CustomFormInputProps> = () => {
           </CustomButton>
           <CustomButton>
             <FaIcons.FaRegCreditCard className="button_icon" />
-            Update Credit Card
+            UpdateProfile Credit Card
           </CustomButton>
         </ButtonGroup>
       </Form>
       <ToastComponent
-        content="You have successfully updated the logo"
+        content="You have successfully UpdateProfiled the logo"
         header="Logo Upload"
         status="Successful"
         toastPostion="bottom-end"
@@ -175,4 +174,4 @@ const CustomFormInput: React.FunctionComponent<CustomFormInputProps> = () => {
   );
 };
 
-export default CustomFormInput;
+export default UpdateProfile;
