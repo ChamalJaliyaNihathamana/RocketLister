@@ -27,7 +27,4 @@ const ToastComponent: React.FunctionComponent<ToastComponentProps> = (
     </ToastContainer>
   );
 };
-
-debugger;
-
 export default ToastComponent;

@@ -25,7 +25,7 @@ const PickUp: React.FunctionComponent<PickUpProps> = () => {
         <Form.Group className="mb-3">
           <Row>
             <Col>
-              <Title type="section" name="pick up address" />
+              <Title> pick up address </Title>
             </Col>
           </Row>
         </Form.Group>
@@ -52,7 +52,7 @@ const PickUp: React.FunctionComponent<PickUpProps> = () => {
         <Form.Group className="mb-3">
           <Row>
             <Col>
-              <Title type="section" name="confirm location" />
+              <Title>confirm location</Title>
               <Map />
             </Col>
           </Row>

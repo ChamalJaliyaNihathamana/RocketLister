@@ -1,25 +1,24 @@
 import React from "react";
-import * as FaIcons from "react-icons/fa";
+import {
+  ChatLeftTextFill,
+  ClockHistory,
+  PersonCircle,
+} from "react-bootstrap-icons";
 
 export const SidenavData = [
   {
     title: "My Dashboard",
     path: "/dashboard",
-    icon: <FaIcons.FaHome />,
+    icon: <ChatLeftTextFill />,
   },
   {
     title: "Order History",
     path: "/order-history",
-    icon: <FaIcons.FaUsers />,
+    icon: <ClockHistory />,
   },
   {
     title: "Update Profile",
     path: "/update-profile",
-    icon: <FaIcons.FaTasks />,
-  },
-  {
-    title: "Pick Up",
-    path: "/pick-up",
-    icon: <FaIcons.FaTasks />,
+    icon: <PersonCircle />,
   },
 ];

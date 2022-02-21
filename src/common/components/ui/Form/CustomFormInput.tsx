@@ -12,7 +12,7 @@ import {
 } from "react-bootstrap";
 import * as FaIcons from "react-icons/fa";
 import "./CustomFormInput.scss";
-import ModalComponent from "../Modal/modal";
+import ModalComponent from "../Modal/Modal";
 import ToastComponent from "../Toast/ToastComponent";
 import CustomButton from "../Button/CustomButton";
 import { toast } from "react-toastify";

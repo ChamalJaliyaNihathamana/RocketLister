@@ -1,10 +1,9 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
-import styled from 'styled-components'
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import styled from "styled-components";
 
-import * as FaIcons from 'react-icons/fa'
-
-import { SidenavData } from './SidenavData'
+import { SidenavData } from "./SidenavData";
+import { ArrowLeft, ArrowRight } from "react-bootstrap-icons";
 
 const Navbar = styled.div`
   display: flex;
@@ -12,41 +11,51 @@ const Navbar = styled.div`
   align-items: center;
   height: 3.5rem;
   background-color: transparent;
-`
+`;
 
 const MenuIconOpen = styled(Link)`
   display: flex;
-  justify-content: start;
-  font-size: 1rem;
-  margin-left: 2rem;
+  align-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: end;
+  font-size: 0.8rem;
+  text-decoration: none;
+
   color: #000;
   &:hover {
     color: orange;
   }
-`
+`;
 
 const MenuIconClose = styled(Link)`
   display: flex;
+  align-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
   justify-content: end;
-  font-size: 1rem;
-  margin-top: 5rem;
+  font-size: 0.8rem;
+  margin-top: 8.5rem;
   margin-right: 1rem;
+  text-decoration: none;
   color: #000;
   &:hover {
     color: orange;
   }
-`
+`;
 
 const SidenavMenu = styled.div<{ close: boolean }>`
   border-right: 0.1rem solid black;
-  width: 250px;
+  width: 200px;
   height: 100vh;
   background-color: #ffffff;
   position: fixed;
   top: 0;
-  left: ${({ close }) => (close ? '0' : '-100%')};
+  left: ${({ close }) => (close ? "0" : "-100%")};
   transition: 0.6s;
-`
+`;
 
 const MenuItems = styled.li`
   list-style: none;
@@ -54,57 +63,52 @@ const MenuItems = styled.li`
   align-items: center;
   justify-content: start;
   width: 100%;
-  height: 90px;
-  padding: 1rem 0 1.25rem;
-`
+  height: 3rem;
+`;
 
 const MenuItemLinks = styled(Link)`
   display: flex;
   align-items: center;
-  padding: 2rem 2rem;
-  font-size: 20px;
+  padding: 1rem 1rem;
+  font-size: 1rem;
   text-decoration: none;
   color: black;
   &:hover {
-    background-color: #ffffff;
     color: orange;
-    width: 100%;
-    height: 45px;
-    text-align: center;
-    border-radius: 5px;
-    margin: 0 2rem;
   }
-`
+`;
 
 const Sidenav: React.FunctionComponent = () => {
-  const [close, setClose] = useState(false)
-  const showSidenav = () => setClose(!close)
+  const [close, setClose] = useState(false);
+  const showSidenav = () => setClose(!close);
   return (
     <>
       <Navbar>
         <MenuIconOpen to="#" onClick={showSidenav}>
-          <FaIcons.FaBars />
+          <ArrowRight />
+          Show
         </MenuIconOpen>
       </Navbar>
 
       <SidenavMenu close={close}>
         <MenuIconClose to="#" onClick={showSidenav}>
-          <FaIcons.FaTimes />
+          <ArrowLeft />
+          Hide
         </MenuIconClose>
 
         {SidenavData.map((item, index) => {
           return (
             <MenuItems key={index}>
-              <MenuItemLinks to={item.path}>
+              <MenuItemLinks to={item.path} className="active">
                 {item.icon}
-                <span style={{ marginLeft: '16px' }}>{item.title}</span>
+                <span style={{ marginLeft: "16px" }}>{item.title}</span>
               </MenuItemLinks>
             </MenuItems>
-          )
+          );
         })}
       </SidenavMenu>
     </>
-  )
-}
+  );
+};
 
-export default Sidenav
+export default Sidenav;

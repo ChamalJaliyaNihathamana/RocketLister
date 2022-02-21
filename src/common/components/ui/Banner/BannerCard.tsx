@@ -1,10 +1,10 @@
 import React from "react";
-import { Card, Col, Container, Row } from "react-bootstrap";
+import { Image, Col, Row } from "react-bootstrap";
 import Title from "../Title/Title";
 
 interface BannerCardProps {
   title: string;
-  description: string;
+  description: any;
   image: any;
 }
 
@@ -14,19 +14,15 @@ const BannerCard: React.FunctionComponent<BannerCardProps> = ({
   image,
 }) => {
   return (
-    <Container>
-      <Row>
-        <Col>
-          <Title name={title} type="banner" />
-          <p>{description}</p>
-        </Col>
-        <Col>
-          <Card>
-            <Card.Img variant="top" src={image} />
-          </Card>
-        </Col>
-      </Row>
-    </Container>
+    <Row className="banner">
+      <Col  className="banner__text-box">
+        <Title className="banner__text-box--title">{title}</Title>
+        <p className="banner__text-box--description">{description}</p>
+      </Col>
+      <Col className="banner__image-box">
+        <Image className="banner__image-box--image" src={image} />
+      </Col>
+    </Row>
   );
 };
 

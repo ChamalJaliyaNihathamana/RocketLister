@@ -1,5 +1,5 @@
 import React from "react";
-import { Col, Container, Figure, Row } from "react-bootstrap";
+import { Col, Figure, Row } from "react-bootstrap";
 
 interface AvatarProps {
   image: string;
@@ -13,19 +13,20 @@ const Avatar: React.FunctionComponent<AvatarProps> = ({
   name,
 }) => {
   return (
-    <Container>
-      <Row>
-        <Col>
-          <Figure>
-            <Figure.Image width={160} max-height={160} alt={name} src={image} />
-          </Figure>
-        </Col>
-        <Col>
-          <h1>Hello {name}</h1>
-          <h1>{logo}</h1>
-        </Col>
-      </Row>
-    </Container>
+    <Row className="avatar">
+      <Col xs={3} className="avatar__image-box">
+        <Figure>
+          <Figure.Image className="avatar__image" alt={name} src={image} />
+        </Figure>
+      </Col>
+      <Col xs={9} className="avatar__text-box">
+        <h1 className="avatar__text-box--avatar-name">{name}</h1>
+        <h1 className="avatar__text-box--logo">{logo}</h1>
+        <p className="avatar__text-box--org">
+          <strong>Killer</strong>Williams
+        </p>
+      </Col>
+    </Row>
   );
 };
 

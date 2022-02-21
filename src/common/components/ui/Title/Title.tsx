@@ -1,13 +1,23 @@
-import * as React from "react"
-import "./Title.scss"
+import * as React from "react";
+import "./Title.scss";
 
 interface TitleProps {
-  type: string;
-  name: string;
+  children?: React.ReactNode;
+  className?: string;
+  icon?: React.ReactElement;
 }
 
-const Title: React.FunctionComponent<TitleProps> = (props: TitleProps) => {
-  return <h1 className={props.type}>{props.name}</h1>;
+const Title: React.FunctionComponent<TitleProps> = ({
+  children,
+  className,
+  icon = "",
+}) => {
+  return (
+    <h1 className={className}>
+      {icon ? <span className="text-icon">{icon}</span> : null}
+      {children}
+    </h1>
+  );
 };
 
 export default Title;

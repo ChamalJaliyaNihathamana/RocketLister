@@ -1,18 +1,18 @@
-import * as React from 'react'
-import { Container, Nav, Navbar } from 'react-bootstrap'
-import { Link } from 'react-router-dom'
-
+import * as React from "react";
+import { Container, Nav, Navbar } from "react-bootstrap";
+import { Link } from "react-router-dom";
 interface HeaderProps {
-  // location: string
+  location: string;
 }
 
 interface HeaderState {}
 class Header extends React.Component<HeaderProps, HeaderState> {
   constructor(props: HeaderProps) {
-    super(props)
-    this.state = {}
+    super(props);
+    this.state = {};
   }
   render() {
+
     return (
       <Navbar sticky="top" bg="light">
         <Container>
@@ -32,8 +32,8 @@ class Header extends React.Component<HeaderProps, HeaderState> {
           </Nav>
         </Container>
       </Navbar>
-    )
+    );
   }
 }
 
-export default Header
+export default Header;
