@@ -1,6 +1,7 @@
 import { Container } from "@mui/material";
 import React from "react";
 import { Col, Form, Row } from "react-bootstrap";
+import { ChevronDoubleRight } from "react-bootstrap-icons";
 import CustomButton from "../../../common/components/ui/Button/CustomButton";
 import PricingCard from "../../../common/components/ui/PricingCard/PricingCard";
 import Title from "../../../common/components/ui/Title/Title";
@@ -113,6 +114,9 @@ class PricingPage extends React.Component<PricingPageProps, PricingPageState> {
         <Row>
           <PricingCard data={this.state.pricing} />
         </Row>
+        <CustomButton icon={<ChevronDoubleRight />}>
+          A La Carte/Build Your Own
+        </CustomButton>
       </Container>
     );
   }

@@ -20,6 +20,8 @@ import RegisterPage from "./pages/Register/RegisterPage";
 import "./styles/css/style.css";
 import Header from "./common/components/ui/Header/Header";
 import PricingPage from "./pages/Packages/Pricing/PricingPage";
+import PackagePage from "./pages/Packages/Package/PackagePage";
+import Temp from "./pages/temp";
 interface AppProps {
   name: string;
 }
@@ -48,7 +50,7 @@ class App extends React.Component<AppProps, AppState> {
     return (
       <div>
         <Router>
-          <Header type="default"/>
+          <Header type="default" />
           <Routes>
             <Route path="/dashboard" element={<DashboardPage />} />
             <Route path="/order-history" element={<OrderHistoryPage />} />
@@ -56,6 +58,8 @@ class App extends React.Component<AppProps, AppState> {
             <Route path="/login" element={<LoginPage />} />
             <Route path="/register" element={<RegisterPage />} />
             <Route path="/pricing" element={<PricingPage />} />
+            <Route path="/package" element={<PackagePage />} />
+            <Route path="/temp" element={<Temp />} />
             <Route path="/" element={<HomePage />} />
           </Routes>
 
