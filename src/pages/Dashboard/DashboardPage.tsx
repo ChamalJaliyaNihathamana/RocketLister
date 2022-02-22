@@ -1,8 +1,9 @@
 import * as React from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import Avatar from "../common/components/ui/Avatar/Avatar";
-import BannerCard from "../common/components/ui/Banner/BannerCard";
-import Sidenav from "../common/components/ui/SideBar/Sidenav";
+import Avatar from "../../common/components/ui/Avatar/Avatar";
+import BannerCard from "../../common/components/ui/Banner/BannerCard";
+import Header from "../../common/components/ui/Header/Header";
+import Sidenav from "../../common/components/ui/SideBar/Sidenav";
 
 interface DashboardPageProps {}
 
@@ -34,6 +35,7 @@ class DashboardPage extends React.Component<
 
     return (
       <Container>
+        <Header type="dashboard"/>
         <Row className="mt-3">
           <Col xs={2}>
             <Sidenav />

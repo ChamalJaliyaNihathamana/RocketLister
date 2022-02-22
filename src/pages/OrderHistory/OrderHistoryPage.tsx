@@ -1,7 +1,7 @@
 import React from 'react'
-import GridTable from '../common/components/ui/Grid/Grid'
+import GridTable from '../../common/components/ui/Grid/Grid'
 
-import Sidenav from '../common/components/ui/SideBar/Sidenav'
+import Sidenav from '../../common/components/ui/SideBar/Sidenav'
 
 interface OrderHistoryPageProps {}
 

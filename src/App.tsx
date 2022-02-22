@@ -9,17 +9,17 @@ import {
 import "./App.scss";
 import Footer from "./common/components/ui/Footer/Footer";
 // import HeaderDashboard from "./common/components/ui/Header/HeaderDashboard";
-import DashboardPage from "./pages/DashboardPage";
-import HomePage from "./pages/HomePage";
-import OrderHistoryPage from "./pages/OrderHistoryPage";
-import PickupPage from "./pages/PickupPage";
+import DashboardPage from "./pages/Dashboard/DashboardPage";
+import HomePage from "./pages/Home/HomePage";
+import OrderHistoryPage from "./pages/OrderHistory/OrderHistoryPage";
 import UpdateProfilePage from "./pages/UpdateProfile/UpdateProfilePage";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import LoginPage from "./pages/Login/LoginPage";
 import RegisterPage from "./pages/Register/RegisterPage";
 import "./styles/css/style.css";
-import HeaderBar from "./common/components/ui/Header/Header";
+import Header from "./common/components/ui/Header/Header";
+import PricingPage from "./pages/Packages/Pricing/PricingPage";
 interface AppProps {
   name: string;
 }
@@ -48,14 +48,14 @@ class App extends React.Component<AppProps, AppState> {
     return (
       <div>
         <Router>
-          <HeaderBar type="default"/>
+          <Header type="default"/>
           <Routes>
             <Route path="/dashboard" element={<DashboardPage />} />
             <Route path="/order-history" element={<OrderHistoryPage />} />
             <Route path="/update-profile" element={<UpdateProfilePage />} />
-            <Route path="/pick-up" element={<PickupPage />} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="/register" element={<RegisterPage />} />
+            <Route path="/pricing" element={<PricingPage />} />
             <Route path="/" element={<HomePage />} />
           </Routes>
 
